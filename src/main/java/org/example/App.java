@@ -13,8 +13,11 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(App.class.getResource("/view/principal.fxml"));
         Parent root = loader.load();
 
+        Scene scene = new Scene(root, 900, 600);
+        scene.getStylesheets().add(getClass().getResource("/css/estilos.css").toExternalForm());
+
         stage.setTitle("Gestión de inventario");
-        stage.setScene(new Scene(root, 900, 600));
+        stage.setScene(scene);
         stage.show();
     }
 
