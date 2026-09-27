@@ -1,7 +1,6 @@
-package org.example.model;
+package org.example.dao;
 
 import org.example.model.Producto;
-import org.example.model.ProductoDAO;
 
 import java.util.List;
 
