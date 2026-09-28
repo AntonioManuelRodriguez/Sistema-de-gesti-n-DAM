@@ -1,0 +1,277 @@
+/* ===========================================================
+   Paleta de colores — tema claro tipo dashboard
+   =========================================================== */
+* {
+    -fondo-app: #f4f6fb;
+    -fondo-tarjeta: #ffffff;
+    -borde-suave: #e3e7f0;
+    -texto-principal: #1f2937;
+    -texto-secundario: #6b7280;
+    -azul: #2f6fed;
+    -azul-oscuro: #1d4ed8;
+    -verde: #16a34a;
+    -verde-suave: #e8f8ef;
+    -naranja: #f59e0b;
+    -naranja-suave: #fef3e2;
+    -morado: #7c3aed;
+    -morado-suave: #f1eafe;
+    -rojo: #e11d48;
+    -sombra: rgba(31, 41, 55, 0.08);
+}
+
+.root {
+    -fx-background-color: -fondo-app;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* ===========================================================
+   Barra superior
+   =========================================================== */
+.barra-superior {
+    -fx-background-color: -fondo-tarjeta;
+    -fx-border-color: transparent transparent -borde-suave transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 18 25 18 25;
+}
+
+.titulo-app {
+    -fx-text-fill: -texto-principal;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.subtitulo-app {
+    -fx-text-fill: -texto-secundario;
+    -fx-font-size: 12px;
+}
+
+/* ===========================================================
+   Tarjetas de indicadores (KPI), estilo NetSuite
+   =========================================================== */
+.tarjeta-kpi {
+    -fx-background-color: -fondo-tarjeta;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: -borde-suave;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, -sombra, 10, 0, 0, 2);
+    -fx-padding: 16 20 16 20;
+    -fx-min-width: 200;
+}
+
+.kpi-etiqueta {
+    -fx-text-fill: -texto-secundario;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.kpi-valor {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.kpi-icono {
+    -fx-background-radius: 10;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-alignment: CENTER;
+}
+
+.kpi-azul .kpi-valor      { -fx-text-fill: -azul-oscuro; }
+.kpi-azul .kpi-icono      { -fx-background-color: derive(-azul, 85%); }
+
+.kpi-verde .kpi-valor     { -fx-text-fill: -verde; }
+.kpi-verde .kpi-icono     { -fx-background-color: -verde-suave; }
+
+.kpi-naranja .kpi-valor   { -fx-text-fill: -naranja; }
+.kpi-naranja .kpi-icono   { -fx-background-color: -naranja-suave; }
+
+.kpi-morado .kpi-valor    { -fx-text-fill: -morado; }
+.kpi-morado .kpi-icono    { -fx-background-color: -morado-suave; }
+
+/* ===========================================================
+   TableView
+   =========================================================== */
+.table-view {
+    -fx-background-color: -fondo-tarjeta;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: -borde-suave;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, -sombra, 12, 0, 0, 3);
+    -fx-padding: 4;
+    -fx-fixed-cell-size: 42px;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: -fondo-tarjeta;
+    -fx-border-color: transparent transparent -borde-suave transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-pref-height: 40px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: -texto-secundario;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell {
+    -fx-background-color: -fondo-tarjeta;
+    -fx-border-color: transparent transparent -borde-suave transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: derive(-azul, 95%);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: derive(-azul, 88%);
+    -fx-background-insets: 0, 0 0 0 3;
+    -fx-border-color: transparent transparent -borde-suave transparent;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: -azul-oscuro;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: -texto-principal;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 14;
+}
+
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: -borde-suave;
+    -fx-background-radius: 6;
+}
+
+.table-view .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+/* ===========================================================
+   Panel del formulario
+   =========================================================== */
+.panel-formulario {
+    -fx-background-color: -fondo-tarjeta;
+    -fx-background-radius: 12;
+    -fx-border-color: -borde-suave;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, -sombra, 12, 0, 0, 3);
+    -fx-padding: 18;
+}
+
+.panel-titulo {
+    -fx-text-fill: -texto-principal;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ===========================================================
+   Campos de texto
+   =========================================================== */
+.text-field {
+    -fx-background-color: -fondo-app;
+    -fx-text-fill: -texto-principal;
+    -fx-prompt-text-fill: -texto-secundario;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: -borde-suave;
+    -fx-border-width: 1.5;
+    -fx-padding: 9 12 9 12;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-border-color: -azul;
+    -fx-background-color: -fondo-tarjeta;
+    -fx-effect: dropshadow(gaussian, derive(-azul, 60%), 8, 0.3, 0, 0);
+}
+
+/* ===========================================================
+   Botones
+   =========================================================== */
+.button {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 9 20 9 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+.boton-agregar {
+    -fx-background-color: -verde;
+}
+
+.boton-agregar:hover {
+    -fx-background-color: derive(-verde, -12%);
+}
+
+.boton-editar {
+    -fx-background-color: -azul;
+}
+
+.boton-editar:hover {
+    -fx-background-color: -azul-oscuro;
+}
+
+.boton-eliminar {
+    -fx-background-color: -rojo;
+}
+
+.boton-eliminar:hover {
+    -fx-background-color: derive(-rojo, -12%);
+}
+
+/* ===========================================================
+   Alertas
+   =========================================================== */
+.dialog-pane {
+    -fx-background-color: -fondo-tarjeta;
+}
+
+.dialog-pane .content.label,
+.dialog-pane .header-panel .label {
+    -fx-text-fill: -texto-principal;
+}
+
+.dialog-pane .button {
+    -fx-background-color: -azul;
+}
+
+/* ===========================================================
+   Scrollbars generales
+   =========================================================== */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -borde-suave;
+    -fx-background-radius: 8;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: -azul;
+}

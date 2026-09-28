@@ -24,6 +24,9 @@ public class Producto {
         Categoria = categoria;
     }
 
+    //Constructor vacio
+    public Producto() {}
+
     // Getters y Setters
 
     public int getId() {
