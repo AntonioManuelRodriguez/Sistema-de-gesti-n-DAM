@@ -2,8 +2,6 @@
 
 Aplicación de escritorio para gestionar el inventario de productos de un negocio: alta, edición, eliminación y visualización de stock, con un panel de indicadores estilo dashboard.
 
-Proyecto realizado como parte de la FP Dual (DAM) en el IES Delgado Hernández, con FCT en el IES El Valle (Hinojos, Huelva).
-
 ## Tecnologías
 
 - **Java 17**
